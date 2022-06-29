@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { SanityService } from 'src/app/service/sanity.service';
 declare let Email: any;
 
 @Component({
@@ -7,8 +8,9 @@ declare let Email: any;
   templateUrl: './part3.component.html',
   styleUrls: ['./part3.component.css']
 })
-export class Part3Component implements OnInit {
-  lang = 1; 
+export class Part3Component implements OnInit, OnDestroy{
+  lang:number = 1; 
+  langChange:any;
 
   myform:any = new FormGroup({
     name: new FormControl('', [
@@ -58,10 +60,17 @@ export class Part3Component implements OnInit {
       msg_ar: 'في المخزن'
     },
   ]
-  constructor() { }
+  
+  constructor(private sanityService: SanityService){  }
 
   ngOnInit() {
+    this.langChange = this.sanityService.changeLangObs.subscribe((data:any)=>{
+      this.lang = data;
+    })
+  }
 
+  ngOnDestroy(): void {
+    this.langChange.unsubscribe(); 
   }
 
   changeLng(ref:any){

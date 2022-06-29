@@ -1,19 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SanityService } from 'src/app/service/sanity.service';
 
 @Component({
   selector: 'app-part1',
   templateUrl: './part1.component.html',
   styleUrls: ['./part1.component.css']
 })
-export class Part1Component implements OnInit {
-  lang = 1;
+export class Part1Component implements OnInit, OnDestroy {
+  lang:any = 1;
+  langChange:any;
 
-  constructor(){
-  }
+  constructor(private sanityService: SanityService){  }
 
   ngOnInit() {
+    this.langChange = this.sanityService.changeLangObs.subscribe((data)=>{
+      this.lang = data;
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.langChange.unsubscribe(); 
   }
 
   en = {

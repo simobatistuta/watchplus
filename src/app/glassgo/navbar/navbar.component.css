@@ -1,0 +1,31 @@
+.glassSwtich{
+    height: auto;
+    width: 40px;
+    border: 1px solid rgb(255 254 254 / 30%);
+    border-radius: 50px;
+    background: rgb(0 0 0 / 30%);
+    margin-left: 20px;
+}
+.switchOn,
+.switchOff{
+    height: 38px;
+    width: 100%;
+    place-items: center;
+    display: grid;
+    border-radius: 50px;
+    color: rgb(255 254 254 / 80%);
+    background: unset;
+    cursor: pointer;
+}
+.switchOn{
+    background: #fff;
+    color: #1d1d1d;
+}
+.switchOn i,
+.switchOff i{
+    color: inherit;
+}
+.navBarflex{
+    display: grid;
+    grid-gap: 20px;
+}

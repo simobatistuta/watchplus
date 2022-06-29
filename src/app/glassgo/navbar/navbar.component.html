@@ -1,0 +1,25 @@
+<div class="navBarCtn">
+  <div class="navBarflex">
+
+    <div class="navBarPost_title">
+      <div class="navBarPos">{{getLevel()}}</div>
+    </div>
+   
+    <div class="languageSwitcher">
+      <div class="{{lang == 1 ? 'langOn' : 'lang'}}" (click)="changeLng(1)"><span class="flag-icon flag-icon-us flag-icon-squared"></span></div>
+      <div class="{{lang == 2 ? 'langOn' : 'lang'}}" (click)="changeLng(2)"><span class="flag-icon flag-icon-fr flag-icon-squared"></span> </div>
+      <div class="{{lang == 3 ? 'langOn' : 'lang'}}" (click)="changeLng(3)"><span class="flag-icon flag-icon-ma flag-icon-squared"></span></div>
+    </div>
+   
+
+    <div class="glassSwtich" (click)="changeGlass()">
+      <div class="{{ glass == 1 ? 'switchOn' : 'switchOff' }}">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <div class="{{ glass == 2 ? 'switchOn' : 'switchOff' }}">
+        <i class="fas fa-sun"></i>
+      </div>
+    </div>
+
+</div>
+</div>

@@ -9,7 +9,6 @@ import { SanityService } from '../service/sanity.service';
 })
 export class NavigationComponent implements OnInit {
   pagePath:any;
-  sub = 1;
   constructor(public sanityService: SanityService,
               public router: Router,
               public ac_route: ActivatedRoute) 
@@ -25,9 +24,5 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  scroll(ref:any) {
-    this.sub = ref;
-    this.sanityService.scroll.next(ref)
-  }
 
 }

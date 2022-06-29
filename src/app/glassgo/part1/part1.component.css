@@ -1,20 +1,15 @@
 .pageLeft{
-    width: 80%;
     white-space: normal;
     position: relative;
     max-width: 1000px;
     margin: auto;
 }
-.pageLogoCtn{
-    display: flex;
-    align-items: center;
-    grid-gap: 20px;
-}
 .pageLogoIcon img{
     height: 80px;
 }
 .pageLogo{
-    width: 300px;
+    max-width: 500px;
+    display: flex;
 }
 .pageTitle{
     margin: 30px 0;
@@ -43,3 +38,26 @@
     color: #1d1d1d;
 }
 
+@media only screen and (max-width: 999px) {
+    .fullPage {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .pageLogo{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .pageTitle{
+        margin: 0 0 30px 0;
+        font-size: 30px;
+    }
+  
+
+    .pageSubTitle {
+        font-size: 25px;
+    }
+    .getNow{
+        font-size: 20px;
+    }
+}

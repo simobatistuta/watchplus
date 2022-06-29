@@ -54,3 +54,23 @@ label {
     background: #fff;
     color: #1d1d1d;
 }
+
+@media only screen and (max-width: 999px) {
+    .fullPage {
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        white-space: break-spaces;
+    }
+    .offersPrices,
+    .offersCtn{
+        grid-template-columns: auto;
+    }
+    .offersRight{
+        margin-top: 50px;
+        max-width: 400px;
+    }
+    .offersCardCtn{
+        padding-left: 0 !important;
+    }
+}

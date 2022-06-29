@@ -6,6 +6,12 @@
     font-family: "Rubik", sans-serif;
     color: #fff;
 }
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -27,25 +33,12 @@ img{
     height: 100%;
     width: 100%;
     align-items: center;
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
 }
 .pageFlex{
     width: 100%;
 }
-.offerTitle{
-    color: rgb(255, 255, 255, 1);
-    font-size: 40px;
-    font-weight: bold;
-}
-.offerTitleCtn{
-    display: flex;
-    width: 1000px;
-    margin: auto;
-    position: relative;
-    align-items: center;
-    grid-gap: 20px;
-}
+
 .offerBolb{
     box-shadow: 0 0 6px 1px #fff;
     background: #fff;
@@ -123,17 +116,26 @@ input::placeholder{
 }
 .languageSwitcher{
     display: grid;
-    position: absolute;
-    right: 0;
-    top: 0;
-    grid-gap: 10px;
-    padding: 10px;
-    margin: auto;
+    position: relative;
+    width: 40px;
     align-items: center;
+    margin-left: 20px;
+    border: 1px solid rgb(255 254 254 / 30%);
+    border-radius: 50px;
+    background: rgb(0 0 0 / 30%);
+}
+.navBarPos{
+    font-size: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    margin-left: 20px;
 }
 .lang,
 .langOn{
-    padding: 5px 20px;
+    height: 38px;
+    width: 100%;
     font-size: 15px;
     position: relative;
     color: rgba(255, 255, 255, 0.6);
@@ -141,17 +143,15 @@ input::placeholder{
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
-    height: auto;
-    width: auto;
-    border: 1px solid rgb(255 255 255 / 30%);
-    background: rgb(0 0 0 / 30%);
+    display: grid;
+    place-items: center;
     place-items: center;
     text-align: center;
     border-radius: 50px;
-    font-weight: bold;
 }
 .langOn,
 .lang:hover{
     background: #fff;
     color: #1d1d1d;
 }
+

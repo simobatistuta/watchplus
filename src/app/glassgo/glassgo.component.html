@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <div class="glassBox">
+  <div class="{{glassChange == 1 ? 'glassBox' : 'glassBoxOff' }}">
     <app-navigation></app-navigation>
     <div class="glassBoxCtn">
       <div class="glassBoxScroll" [@routeAnimations]="getRouteAnimationData(outlet)">

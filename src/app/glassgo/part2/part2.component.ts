@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { SanityService } from 'src/app/service/sanity.service';
 
 @Component({
   selector: 'app-part2',
   templateUrl: './part2.component.html',
   styleUrls: ['./part2.component.css']
 })
-export class Part2Component implements OnInit {
-  lang = 1;
+export class Part2Component implements OnInit, OnDestroy {
+  lang:any = 1;
+  langChange:any;
 
   netFlix_en = 'Contact us on whatsapp for netflix accounts';
   netFlix_fr = 'Contactez-nous sur WhatsApp pour les comptes netflix';
@@ -79,9 +81,16 @@ export class Part2Component implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private sanityService: SanityService){  }
 
   ngOnInit() {
+    this.langChange = this.sanityService.changeLangObs.subscribe((data)=>{
+      this.lang = data;
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.langChange.unsubscribe(); 
   }
 
   en = {

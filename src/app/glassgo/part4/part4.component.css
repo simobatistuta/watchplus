@@ -1,3 +1,7 @@
+.logoName {
+    width: 270px;
+    display: flex;
+}
 .dpk_logo{
     height: 35px;
     width: 35px;
@@ -10,10 +14,13 @@
     color: rgb(255 255 255 / 80%);
 }
 .footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: grid;
     width: 1000px;
     margin: auto;
-    position: relative;
     align-items: center;
     grid-gap: 20px;
     grid-template-columns: 1fr auto;
@@ -51,4 +58,68 @@
     font-weight: bold;
     margin-top: 25px;
     line-height: 1.8;
+}
+
+
+
+.menuNavCtn,
+.menuNavCtnOn{
+    position: relative;
+    color: rgba(255, 255, 255, 0.6);
+    display: grid;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(255 255 255 / 30%);
+    background: rgb(0 0 0 / 30%);
+    place-items: center;
+    border-radius: 50px;
+}
+.menuNavCtnOn,
+.menuNavCtn:hover{
+    color: #1d1d1d;
+    background: #fff;
+}
+.menuNavCtnOn i,
+.menuNavCtn i{
+    color: inherit;
+}
+
+@media only screen and (max-width: 999px) {
+    .fullPage {
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        white-space: break-spaces;
+    }
+    .offersCtn{
+        grid-template-columns: auto;
+        grid-gap: 30px;
+    }
+    .footer{
+        left: 0;
+        position: relative;
+        border: 1px solid rgb(255 255 255 / 30%);
+        display: table;
+        width: auto;
+        border-radius: 10px;
+        transform: translateX(0%);
+        margin-top: 30px;
+        margin-bottom: 80px;
+    }
+    .madeBy{
+        display: block;
+        text-align: center;
+    }
+    .dpk_logo{
+        margin: 10px auto;
+        height: 50px;
+        width: 50px;
+    }
+    .logoName {
+        width: 100%;
+        max-width: 280px;
+    }
 }

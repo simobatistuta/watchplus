@@ -9,8 +9,11 @@ import { Subject } from 'rxjs';
 
 export class SanityService {
 
-  scroll = new Subject();
-  scrollObs = this.scroll.asObservable();
+  changeLang = new Subject();
+  changeLangObs = this.changeLang.asObservable();
+
+  glassSwitch = new Subject();
+  glassSwitchObs = this.glassSwitch.asObservable();
 
   client = sanityClient({
     projectId: "3slzzlgf",
@@ -32,5 +35,7 @@ export class SanityService {
       }`
     );
   }
+
+  
   
 }

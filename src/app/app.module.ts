@@ -10,11 +10,13 @@ import { Part2Component } from './glassgo/part2/part2.component';
 import { Part3Component } from './glassgo/part3/part3.component';
 import { Part4Component } from './glassgo/part4/part4.component';
 import { NavigationComponent } from './navigation/navigation.component';
-
+import { NavbarComponent } from './glassgo/navbar/navbar.component';
 import { SanityService } from './service/sanity.service';
-// import ngx-translate and the http loader
+
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [		
@@ -24,14 +26,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     Part2Component,
     Part3Component,
     Part4Component,
-    NavigationComponent
+    NavigationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
 
   ],
   providers: [SanityService], 

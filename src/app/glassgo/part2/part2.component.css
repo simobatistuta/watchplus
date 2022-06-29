@@ -2,16 +2,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-
-}
-.offersCtn{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    white-space: break-spaces;
 }
 .offersCard{
     padding: 30px 0;
@@ -110,4 +100,29 @@
     padding: 10px 20px;
     background: #000;
     border-radius: 0 0 10px 10px;
+}
+
+@media only screen and (max-width: 999px) {
+
+    .offersCtn {
+        display: block;
+    }
+
+    .fullPage {
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        white-space: break-spaces;
+    }
+
+   .offersCardCtn,
+   .offersPrices {
+        grid-template-columns: auto;
+    }
+
+   .netflixOffer {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+
 }

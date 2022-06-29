@@ -14,13 +14,18 @@ import { SanityService } from '../service/sanity.service';
 })
 
 export class GlassgoComponent implements OnInit, OnDestroy {
+  @ViewChild('coverLeft') cover: any;
   coverIND = 0;
   coverChange = 0;
-  @ViewChild('coverLeft') cover: any;
   wallpapers: any = [];
-  sub: any = 1;
+  glassChange = 1;
+  glassChange_sub;
 
-  constructor(private sanityService: SanityService ) { }
+  constructor(private sanityService: SanityService ) { 
+    this.glassChange_sub = this.sanityService.glassSwitchObs.subscribe((data: any)=>{
+      this.glassChange = data;
+    })
+  }
 
   imageUrl(source: any) {
     return this.sanityService.urlFor(source);
@@ -29,13 +34,11 @@ export class GlassgoComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getwallpapers();
     setInterval(() => { this.changeCover(); }, 5000);
-    this.sub = this.sanityService.scrollObs.subscribe((data:any)=>{
-      console.log(data)
-    })
   }
+
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
   }
+
   async getwallpapers(): Promise<any>  {
     let wallpapers = await this.sanityService.getwallpapers();
     this.wallpapers = wallpapers[0].images;
@@ -55,7 +58,6 @@ export class GlassgoComponent implements OnInit, OnDestroy {
 
   getRouteAnimationData(outlet: RouterOutlet){
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData[ 'animation' ];
-
   }
 
 }
