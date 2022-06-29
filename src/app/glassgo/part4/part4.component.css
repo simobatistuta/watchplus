@@ -1,0 +1,54 @@
+.dpk_logo{
+    height: 35px;
+    width: 35px;
+    flex: none;
+}
+.dpk_name {
+    height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255 255 255 / 80%);
+}
+.footer{
+    display: grid;
+    width: 1000px;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    grid-gap: 20px;
+    grid-template-columns: 1fr auto;
+    padding: 10px 20px;
+    background: rgb(0 0 0 / 30%);
+    border-radius: 10px 10px 0 0;
+    border: 1px solid rgb(255 255 255 / 30%);
+    border-bottom: 0;
+}
+.madeBy{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+.offersCtn{
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+.menuFlex{
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+.menuFlex:not(:last-of-type){
+    margin-bottom: 10px;
+}
+.sectionTitle{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.aboutMsg {
+    font-size: 22px;
+    color: rgb(255 255 255 / 100%);
+    font-weight: bold;
+    margin-top: 25px;
+    line-height: 1.8;
+}

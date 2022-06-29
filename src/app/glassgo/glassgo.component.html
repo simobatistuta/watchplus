@@ -1,0 +1,20 @@
+<div class="wallpapers_4">
+
+  <div class="wallpaperSlider" [style.margin-left.px]="coverChange" #coverLeft>
+    <div class="wall_paper" *ngFor="let paper of wallpapers">
+      <img src="{{imageUrl(paper).width(1000)}}">
+    </div>
+  </div>
+
+  <div class="glassBox">
+    <app-navigation></app-navigation>
+    <div class="glassBoxCtn">
+      <div class="glassBoxScroll" [@routeAnimations]="getRouteAnimationData(outlet)">
+
+        <router-outlet style="display: none;" #outlet="outlet"> </router-outlet>
+
+      </div>
+    </div>
+  </div>
+
+</div>

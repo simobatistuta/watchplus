@@ -1,0 +1,31 @@
+<div class="fullPage" style="display: flex;">
+
+  <div class="languageSwitcher">
+    <div class="{{lang == 1 ? 'langOn' : 'lang'}}" (click)="changeLng(1)"> English</div>
+    <div class="{{lang == 2 ? 'langOn' : 'lang'}}" (click)="changeLng(2)"> French </div>
+    <div class="{{lang == 3 ? 'langOn' : 'lang'}}" (click)="changeLng(3)"> Arabic</div>
+  </div>
+
+  <div class="pageFlex">
+
+    <div class="pageLeft">
+      <div class="pageLogoCtn">
+        <div class="pageLogoIcon">
+          <img src="assets/watchplusLogoFav.png">
+        </div>
+        <div class="pageLogo">
+          <img src="assets/watchplusLogo.png">
+        </div>
+      </div>
+   
+      <div class="pageTitle"> {{getTitle()}} </div>
+      <div class="pageSubTitle"> {{getSubTitle()}} </div>
+
+      <a routerLink="contact">
+        <div class="getNow"> {{getBut()}} </div>
+      </a>
+
+    </div>
+
+  </div>
+</div>

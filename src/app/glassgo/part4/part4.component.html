@@ -1,0 +1,59 @@
+<div class="fullPage">
+
+  <div class="offerTitleCtn">
+    <div class="offerBolb"></div>
+    <div class="offerTitle">About us</div>
+  </div>
+
+  <div class="pageFlex">
+    
+    <div class="offersCtn">
+
+      <div class="offersLeft">
+        <div class="madeBy">
+          <div class="dpk_logo"><img src="assets/watchplusLogoFav.png"></div>
+          <div class="dpk_name"><img src="assets/watchplusLogo.png"></div>
+        </div>
+        <div class="aboutMsg">Chez watchplus.com nous fournissons un Support Technique et de Haute Qualité à l'égard de nos précieux Clients qui nous ont fait confiance.</div>
+      </div>
+
+      <div class="offerMiddle">
+        <div class="sectionTitle">Menu</div>
+        <div class="menuCtn">
+
+          <div class="menuFlex" *ngFor="let mn of menu">
+            <div class="routeNavCtn">
+              <i class="{{mn.icon}}"></i>
+            </div>
+            <div class="menuName">{{mn.title}}</div>
+          </div>
+
+        </div>        
+      </div>
+
+      <div class="offersRight">
+        <div class="sectionTitle">Contactez-Nous</div>
+        <div class="menuFlex" *ngFor="let mn of redir">
+          <a href="{{mn.link}}" target="_blank">
+            <div class="routeNavCtn">
+              <i class="{{mn.icon}}"></i>
+            </div>
+          </a>
+          <div class="menuName">{{mn.title}}</div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div> 
+  <div class="footer">
+    © 2022 - watchplus.com 
+    <a href="https://www.facebook.com/Dr.PhantomKnows" target="blank"> 
+      <div class="madeBy">
+        <div class="dpk_logo"><img src="assets/dpk_logo.png"></div>
+        <div class="dpk_name">Dr.Phantom knows</div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+
+
+<div class="mainNavBarGrid">
+
+  <div class="logo">
+    <img src="assets/watchplusLogoFav.png">
+  </div>
+
+  <div class="mainNavSys">
+    <div class="mainNavCtn">
+     
+      <a routerLink="">
+        <div class="{{pagePath == '' ? 'navBolbOn' : 'navBolb' }}"></div>
+        <div class="{{pagePath == '' ? 'routeNavCtnOn' : 'routeNavCtn' }}">
+            <i class="fas fa-home"></i> 
+        </div>
+      </a>
+
+      <a routerLink="offre">
+        <div class="{{pagePath == 'offre' ? 'navBolbOn' : 'navBolb' }}"></div>
+        <div class="{{pagePath == 'offre' ? 'routeNavCtnOn' : 'routeNavCtn' }}">
+            <i class="fas fa-dollar-sign"></i>          
+        </div>
+      </a>
+
+      <a routerLink="contact">
+        <div class="{{pagePath == 'contact' ? 'navBolbOn' : 'navBolb' }}"></div>
+        <div class="{{pagePath == 'contact' ? 'routeNavCtnOn' : 'routeNavCtn' }}">
+          <i class="fas fa-headset"></i>
+        </div>
+      </a>
+
+      <a routerLink="about">
+        <div class="{{pagePath == 'about' ? 'navBolbOn' : 'navBolb' }}"></div>
+        <div class="{{pagePath == 'about' ? 'routeNavCtnOn' : 'routeNavCtn' }}">
+            <i class="fas fa-compass"></i> 
+        </div>
+      </a>
+  
+    </div>
+
+  </div>
+
+</div>
+

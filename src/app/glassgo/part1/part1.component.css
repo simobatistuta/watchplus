@@ -1,0 +1,45 @@
+.pageLeft{
+    width: 80%;
+    white-space: normal;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+.pageLogoCtn{
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+}
+.pageLogoIcon img{
+    height: 80px;
+}
+.pageLogo{
+    width: 300px;
+}
+.pageTitle{
+    margin: 30px 0;
+}
+.pageTitle,
+.pageSubTitle{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 800;
+}
+.pageSubTitle{
+    font-size: 32px;
+}
+.getNow{
+    font-size: 30px;
+    padding: 10px 60px;
+    display: table;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    background: rgb(0 0 0 / 30%);
+    margin-top: 50px;
+    font-weight: bold;
+}
+.getNow:hover{
+    background: #fff;
+    color: #1d1d1d;
+}
+

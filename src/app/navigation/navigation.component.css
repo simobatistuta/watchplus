@@ -1,0 +1,61 @@
+
+.mainNavBarGrid{
+    position: relative;
+    display: grid;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 26;
+    grid-template-rows: 1fr auto;
+    padding: 20px 0 50px 0;
+    height: 100%;
+    width: auto;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    margin-left: 20px;
+}
+.mainNavCtn{
+    display: grid;
+    margin: auto 0;
+    align-items: center;
+    text-align: center;
+    grid-gap: 25px;
+}
+.navBolb,
+.navBolbOn{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 7px;
+    width: 11px;
+    background: rgb(0 0 0 / 40%);
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgb(252 252 252 / 50%);
+    border-left: 0;
+}
+.navBolbOn{
+    background: #fff;
+    box-shadow: 0 0 6px 1px #fff;
+}
+.mainNavCtn a{
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+.mainNavOpt,
+.mainNavOptAc,
+.mainNavOptOff,
+.mainNavOptOn{
+    position: relative;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+    grid-gap: 10px;    
+    color: inherit;
+    cursor: pointer;
+}
+

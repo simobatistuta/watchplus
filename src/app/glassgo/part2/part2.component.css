@@ -1,0 +1,113 @@
+.offersCardCtn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+.offersCtn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    white-space: break-spaces;
+}
+.offersCard{
+    padding: 30px 0;
+    background: rgb(0, 0, 0, 0.3);
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+}
+.oferrs_1{
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+}
+.oferrs_2{
+    color: rgb(255, 255, 255, 1);
+    font-size: 34px;
+    font-weight: bold;
+}
+.oferrs_3{
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+}
+.offersLeft{
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+}
+.cardIcon{
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+.cardIcon i{
+    color: #1d1d1d;
+    font-size: 30px;
+}
+.offersPrices{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.priceCont{
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.priceTime{
+    font-size: 20px;
+    font-weight: bold;
+}
+.priceDol{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #a4ffa4;
+}
+.cardTitle {
+    text-align: center;
+    padding: 25px 10px 15px 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.cardMsg {
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+    color: rgb(255 255 255 / 80%);
+}
+.netflixOffer{
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.netflix{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    background: linear-gradient(0deg, black, rgb(0 0 0 / 50%), transparent);
+    display: grid;
+    align-items: center;
+    grid-template-rows: auto 1fr;
+    font-size: 30px;
+    font-weight: bold;
+}
+.netflixLogo{
+    width: 180px;
+    display: flex;
+    margin: auto;
+    padding: 10px 20px;
+    background: #000;
+    border-radius: 0 0 10px 10px;
+}

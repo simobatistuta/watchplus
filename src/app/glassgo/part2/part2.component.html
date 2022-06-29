@@ -1,0 +1,55 @@
+<div class="fullPage">
+
+  <div class="offerTitleCtn">
+    <div class="offerBolb"></div>
+    <div class="offerTitle">Nous offres</div>
+  </div>
+
+  <div class="languageSwitcher">
+    <div class="{{lang == 1 ? 'langOn' : 'lang'}}" (click)="changeLng(1)"> English</div>
+    <div class="{{lang == 2 ? 'langOn' : 'lang'}}" (click)="changeLng(2)"> French </div>
+    <div class="{{lang == 3 ? 'langOn' : 'lang'}}" (click)="changeLng(3)"> Arabic</div>
+  </div>
+
+  <div class="pageFlex">
+    
+    <div class="offersCtn">
+
+      <div class="offersLeft">
+        <div class="oferrs_1">{{getTitle()}}</div>
+        <div class="oferrs_2">{{getSubTitle()}}</div>
+        <div class="oferrs_3">{{getBut()}}</div>
+        <div class="offersPrices">
+          <div *ngFor="let price of prices; let ind = index" class="priceCont" >
+            <div class="priceDol">{{price.price}}$</div>
+            <div class="priceTime">{{getPriceMsg(ind)}} IPTV</div>
+          </div>
+        </div>
+        <div class="netflixOffer">
+          <img src="assets/shows-to-watch-on-netflix-FT.jpg">
+          <div class="netflix">
+            <div class="netflixLogo">
+              <img src="assets/580b57fcd9996e24bc43c529.png">
+            </div>
+            {{getNetMsg()}}
+          </div>
+        </div>
+      </div>
+  
+      <div class="offersRight">
+        <div class="offersCardCtn">
+          <div class="offersCard" *ngFor="let card of cards; let ind = index;">
+            <div class="cardIcon"><i class="{{card.icon}}"></i></div>
+            <div class="cardTitle">{{getCartTitle(ind)}}</div>
+            <div class="cardMsg">{{getCartMsg(ind)}}</div>
+          </div>
+  
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>    
+</div>

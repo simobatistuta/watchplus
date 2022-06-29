@@ -1,0 +1,72 @@
+<div class="fullPage">
+
+  <div class="offerTitleCtn">
+    <div class="offerBolb"></div>
+    <div class="offerTitle">Obtenir mainteneu</div>
+  </div>
+
+  <div class="languageSwitcher">
+    <div class="{{lang == 1 ? 'langOn' : 'lang'}}" (click)="changeLng(1)"> English</div>
+    <div class="{{lang == 2 ? 'langOn' : 'lang'}}" (click)="changeLng(2)"> French </div>
+    <div class="{{lang == 3 ? 'langOn' : 'lang'}}" (click)="changeLng(3)"> Arabic</div>
+  </div>
+
+  <div class="pageFlex">
+    
+    <div class="offersCtn">
+
+      <div class="offersLeft">
+        <div class="oferrs_1">{{ofr_tit()}}</div>
+        <div class="oferrs_2">{{ofr_sub()}}</div>
+        <div class="offersPrices">
+          <div *ngFor="let num of numbers; let ind = index" class="priceCont" >
+            <div class="countC">{{num.count | number}}</div>
+            <div class="countMsg">{{numMsg(ind)}}</div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="offersRight">
+        <div class="offersCardCtn" style="padding-left: 25px;">
+          <h1 style="margin-bottom: 20px;">Contacter nous</h1>
+          
+          <form [formGroup]="myform">
+
+            <label for="name">Your name*</label>
+            <input type="text" id="name" placeholder="Name" 
+            class="form-control"
+            formControlName="name" 
+            [class]="{error: isValidControl('name') }">
+
+            <label for="email">Your Email*</label>
+            <input type="text" id="email" placeholder="Email" 
+            class="form-control"
+            formControlName="email" 
+            [class]="{error: isValidControl('email')}">
+
+            <label for="phone">Your Phone number*</label>
+            <input type="number" id="phone" placeholder="Phone" 
+            class="form-control"
+            formControlName="phone" 
+            [class]="{error: isValidControl('phone')}">
+
+            <label for="message">Your Message*</label>
+            <textarea id="message" placeholder="Your message" cols="30" rows="5" 
+            class="form-control"
+            formControlName="message" 
+            [class]="{ error: isValidControl('message')}"></textarea>
+
+          </form>
+
+          <div class="button_send" placeholder="Envoyer" (click)="onSubmit()">Envoyer</div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>    
+</div>
