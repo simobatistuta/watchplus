@@ -43,7 +43,7 @@ export class Part1Component implements OnInit, OnDestroy {
 
   }
 
-  getTitle(){
+  getTitle(){ 
     if(this.lang==1)
       return this.en.title;
     else if(this.lang == 2)
